@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Drawing.Drawing2D;
 using System.Windows.Forms;
 using AForge.Video.DirectShow;
 using AForge.Video;
@@ -18,6 +19,18 @@ namespace TESTprocesamientodeimagenes
     public partial class Form1 : MaterialForm
 
     {
+
+        public class RoundButton : Button
+        {
+            protected override void OnPaint(System.Windows.Forms.PaintEventArgs e)
+            {
+                GraphicsPath grPath = new GraphicsPath();
+                grPath.AddEllipse(0, 0, ClientSize.Width, ClientSize.Height);
+                this.Region = new System.Drawing.Region(grPath);
+                base.OnPaint(e);
+            }
+        }
+
 
         private bool haycams;
         private FilterInfoCollection MisCams;
@@ -100,6 +113,63 @@ namespace TESTprocesamientodeimagenes
         {
             CerrarCam();
         }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void materialButton1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+        {
+
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox8_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+       
 
         
     }

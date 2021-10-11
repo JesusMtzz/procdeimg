@@ -176,6 +176,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -190,6 +191,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\568122.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\caprisunmonke.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\pijamamonke.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\grayscale.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\sharpening.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\solarize.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\sepia.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\sobel.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
