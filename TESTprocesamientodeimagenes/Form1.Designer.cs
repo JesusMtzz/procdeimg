@@ -30,11 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.materialButton1 = new MaterialSkin.Controls.MaterialButton();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
@@ -43,19 +39,14 @@
             this.Filtro3Button = new System.Windows.Forms.PictureBox();
             this.Filtro2Button = new System.Windows.Forms.PictureBox();
             this.Filtro1Button = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.materialButton2 = new MaterialSkin.Controls.MaterialButton();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Filtro5Button)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Filtro4Button)).BeginInit();
@@ -71,75 +62,37 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.panel1.AutoSize = true;
             this.panel1.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.pictureBox6);
-            this.panel1.Controls.Add(this.pictureBox5);
-            this.panel1.Controls.Add(this.pictureBox4);
-            this.panel1.Controls.Add(this.pictureBox3);
-            this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Controls.Add(this.materialButton2);
+            this.panel1.Controls.Add(this.materialButton1);
             this.panel1.Location = new System.Drawing.Point(0, 63);
             this.panel1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(157, 732);
+            this.panel1.Size = new System.Drawing.Size(211, 732);
             this.panel1.TabIndex = 0;
             // 
-            // pictureBox6
+            // materialButton1
             // 
-            this.pictureBox6.Image = global::TESTprocesamientodeimagenes.Properties.Resources.caprisunmonke;
-            this.pictureBox6.Location = new System.Drawing.Point(4, 374);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(146, 78);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 4;
-            this.pictureBox6.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::TESTprocesamientodeimagenes.Properties.Resources.pijamamonke;
-            this.pictureBox5.Location = new System.Drawing.Point(4, 290);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(146, 78);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 3;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::TESTprocesamientodeimagenes.Properties.Resources.caprisunmonke;
-            this.pictureBox4.Location = new System.Drawing.Point(4, 206);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(146, 78);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 2;
-            this.pictureBox4.TabStop = false;
-            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::TESTprocesamientodeimagenes.Properties.Resources.pijamamonke;
-            this.pictureBox3.Location = new System.Drawing.Point(4, 122);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(146, 78);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 1;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::TESTprocesamientodeimagenes.Properties.Resources.caprisunmonke;
-            this.pictureBox2.Location = new System.Drawing.Point(4, 37);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(146, 79);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.materialButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialButton1.Depth = 0;
+            this.materialButton1.DrawShadows = true;
+            this.materialButton1.HighEmphasis = true;
+            this.materialButton1.Icon = null;
+            this.materialButton1.Location = new System.Drawing.Point(50, 392);
+            this.materialButton1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.materialButton1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialButton1.Name = "materialButton1";
+            this.materialButton1.Size = new System.Drawing.Size(97, 36);
+            this.materialButton1.TabIndex = 0;
+            this.materialButton1.Text = "Sin Filtro";
+            this.materialButton1.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.materialButton1.UseAccentColor = false;
+            this.materialButton1.UseVisualStyleBackColor = true;
+            this.materialButton1.Click += new System.EventHandler(this.materialButton1_Click_1);
             // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(167, 73);
+            this.comboBox1.Location = new System.Drawing.Point(247, 84);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(401, 21);
@@ -151,7 +104,7 @@
             this.button1.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Copperplate Gothic Light", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(572, 73);
+            this.button1.Location = new System.Drawing.Point(652, 84);
             this.button1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(143, 21);
@@ -164,7 +117,7 @@
             // 
             this.pictureBox8.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(806, 230);
+            this.pictureBox8.Location = new System.Drawing.Point(879, 240);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(50, 50);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -175,17 +128,18 @@
             // Filtro5Button
             // 
             this.Filtro5Button.Image = global::TESTprocesamientodeimagenes.Properties.Resources.sobel;
-            this.Filtro5Button.Location = new System.Drawing.Point(701, 408);
+            this.Filtro5Button.Location = new System.Drawing.Point(774, 418);
             this.Filtro5Button.Name = "Filtro5Button";
             this.Filtro5Button.Size = new System.Drawing.Size(100, 73);
             this.Filtro5Button.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Filtro5Button.TabIndex = 11;
             this.Filtro5Button.TabStop = false;
+            this.Filtro5Button.Click += new System.EventHandler(this.Filtro5Button_Click);
             // 
             // Filtro4Button
             // 
             this.Filtro4Button.Image = global::TESTprocesamientodeimagenes.Properties.Resources.sepia;
-            this.Filtro4Button.Location = new System.Drawing.Point(569, 408);
+            this.Filtro4Button.Location = new System.Drawing.Point(642, 418);
             this.Filtro4Button.Name = "Filtro4Button";
             this.Filtro4Button.Size = new System.Drawing.Size(100, 73);
             this.Filtro4Button.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -196,7 +150,7 @@
             // Filtro3Button
             // 
             this.Filtro3Button.Image = global::TESTprocesamientodeimagenes.Properties.Resources.solarize;
-            this.Filtro3Button.Location = new System.Drawing.Point(437, 408);
+            this.Filtro3Button.Location = new System.Drawing.Point(510, 418);
             this.Filtro3Button.Name = "Filtro3Button";
             this.Filtro3Button.Size = new System.Drawing.Size(100, 73);
             this.Filtro3Button.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -207,17 +161,18 @@
             // Filtro2Button
             // 
             this.Filtro2Button.Image = global::TESTprocesamientodeimagenes.Properties.Resources.sharpening;
-            this.Filtro2Button.Location = new System.Drawing.Point(306, 408);
+            this.Filtro2Button.Location = new System.Drawing.Point(379, 418);
             this.Filtro2Button.Name = "Filtro2Button";
             this.Filtro2Button.Size = new System.Drawing.Size(100, 73);
             this.Filtro2Button.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Filtro2Button.TabIndex = 7;
             this.Filtro2Button.TabStop = false;
+            this.Filtro2Button.Click += new System.EventHandler(this.Filtro2Button_Click);
             // 
             // Filtro1Button
             // 
             this.Filtro1Button.Image = global::TESTprocesamientodeimagenes.Properties.Resources.grayscale;
-            this.Filtro1Button.Location = new System.Drawing.Point(174, 408);
+            this.Filtro1Button.Location = new System.Drawing.Point(247, 418);
             this.Filtro1Button.Name = "Filtro1Button";
             this.Filtro1Button.Size = new System.Drawing.Size(100, 73);
             this.Filtro1Button.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -225,20 +180,10 @@
             this.Filtro1Button.TabStop = false;
             this.Filtro1Button.Click += new System.EventHandler(this.pictureBox8_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(167, 100);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(634, 287);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(183, 493);
+            this.label1.Location = new System.Drawing.Point(256, 503);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(86, 13);
             this.label1.TabIndex = 13;
@@ -247,7 +192,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(325, 493);
+            this.label2.Location = new System.Drawing.Point(398, 503);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(61, 13);
             this.label2.TabIndex = 14;
@@ -256,7 +201,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(466, 493);
+            this.label3.Location = new System.Drawing.Point(539, 503);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(44, 13);
             this.label3.TabIndex = 15;
@@ -265,7 +210,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(604, 493);
+            this.label4.Location = new System.Drawing.Point(677, 503);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(34, 13);
             this.label4.TabIndex = 16;
@@ -274,27 +219,47 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(733, 493);
+            this.label5.Location = new System.Drawing.Point(806, 503);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(34, 13);
             this.label5.TabIndex = 17;
             this.label5.Text = "Sobel";
             // 
-            // label6
+            // pictureBox1
             // 
-            this.label6.AutoSize = true;
-            this.label6.ForeColor = System.Drawing.SystemColors.Control;
-            this.label6.Location = new System.Drawing.Point(23, 13);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(107, 13);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Fotos Mas Recientes";
+            this.pictureBox1.Location = new System.Drawing.Point(247, 111);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(620, 301);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // materialButton2
+            // 
+            this.materialButton2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialButton2.Depth = 0;
+            this.materialButton2.DrawShadows = true;
+            this.materialButton2.HighEmphasis = true;
+            this.materialButton2.Icon = null;
+            this.materialButton2.Location = new System.Drawing.Point(22, 313);
+            this.materialButton2.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialButton2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialButton2.Name = "materialButton2";
+            this.materialButton2.Size = new System.Drawing.Size(165, 36);
+            this.materialButton2.TabIndex = 1;
+            this.materialButton2.Text = "Deteccion de Cara";
+            this.materialButton2.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.materialButton2.UseAccentColor = false;
+            this.materialButton2.UseVisualStyleBackColor = true;
+            this.materialButton2.Click += new System.EventHandler(this.materialButton2_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(864, 532);
+            this.ClientSize = new System.Drawing.Size(962, 532);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -318,11 +283,6 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Filtro5Button)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Filtro4Button)).EndInit();
@@ -338,14 +298,8 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox Filtro1Button;
         private System.Windows.Forms.PictureBox Filtro2Button;
         private System.Windows.Forms.PictureBox Filtro4Button;
@@ -357,7 +311,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private MaterialSkin.Controls.MaterialButton materialButton1;
+        private MaterialSkin.Controls.MaterialButton materialButton2;
     }
 }
 
