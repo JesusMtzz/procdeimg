@@ -25,7 +25,12 @@ namespace TESTprocesamientodeimagenes
     public partial class Form1 : MaterialForm
 
     {
+
+        // https://youtu.be/jd5FYHITeOE
+
+
         private Bitmap Imagen2;
+        private Bitmap ActualFrame;
         private BitmapData ImageData, ImageData2;
         private byte[] buffer, buffer2;
         private byte r, g, b, grayscale, location, location2;
@@ -66,7 +71,7 @@ namespace TESTprocesamientodeimagenes
         //faceDetected = new HearCascade;
 
 
-                                                                            //static readonly CascadeClassifier cascadeClassifier = new CascadeClassifier("haarcascade_frontalface_alt_tree.xml");
+                                                 //static readonly CascadeClassifier cascadeClassifier = new CascadeClassifier("haarcascade_frontalface_alt_tree.xml");
 
         public Form1()
         {
@@ -128,9 +133,10 @@ namespace TESTprocesamientodeimagenes
 
         
 
-        async private void capture(object sender , NewFrameEventArgs eventArgs)
+         private void capture(object sender , NewFrameEventArgs eventArgs)
         {
-            Bitmap Imagen = (Bitmap)eventArgs.Frame.Clone(); 
+            Bitmap Imagen = (Bitmap)eventArgs.Frame.Clone();
+            ActualFrame = Imagen;
                                             //var bmp = new Bitmap(Imagen.Width, Imagen.Height, PixelFormat.Format32bppArgb);
 
             switch (filtro)
@@ -144,7 +150,7 @@ namespace TESTprocesamientodeimagenes
                     break;
 
                 case 2:
-                    Sharp(Imagen);
+                    //Sharp(Imagen);
                     break;
                 case 3:
                     Solarize(Imagen);
@@ -153,7 +159,10 @@ namespace TESTprocesamientodeimagenes
                     Sepia(Imagen);
                     break;
                 case 5:
-                    Sobel(Imagen);
+                    //Sobel(Imagen);
+                    //Form2 photo = new Form2(Imagen);
+                    //photo.Show();
+                    //filtro = 0;
                     break;
                 default:
 
@@ -187,13 +196,15 @@ namespace TESTprocesamientodeimagenes
             ImageData = Imagen.LockBits(new Rectangle(0, 0, Imagen.Width, Imagen.Height), ImageLockMode.ReadWrite, PixelFormat.Format24bppRgb);
             buffer = new byte[3 * Imagen.Width * Imagen.Height];
             pointer = ImageData.Scan0;
-            Marshal.Copy(pointer, buffer, 0, buffer.Length);
+              Marshal.Copy(pointer, buffer, 0, buffer.Length);
             for (int i = 0; i < Imagen.Height * 3 * Imagen.Width; i += 3)
             {
                 b = buffer[i];
                 g = buffer[i + 1];
                 r = buffer[i + 2];
+
                 grayscale = (byte)((r + g + b) / 3);
+
                 buffer[i] = grayscale;
                 buffer[i + 1] = grayscale;
                 buffer[i + 2] = grayscale;
@@ -205,7 +216,7 @@ namespace TESTprocesamientodeimagenes
             pictureBox1.Image = Imagen;
         }
         
-        private void Sharp(Bitmap Imagen)
+        /*private void Sharp(Bitmap Imagen)
         {
 
             Imagen2 = new Bitmap(Imagen.Width, Imagen.Height);
@@ -262,7 +273,7 @@ namespace TESTprocesamientodeimagenes
             Imagen.UnlockBits(ImageData);
             Imagen2.UnlockBits(ImageData2);
             pictureBox1.Image = Imagen2;
-        }
+        }*/
 
         private void Solarize(Bitmap Imagen)
         {
@@ -272,9 +283,12 @@ namespace TESTprocesamientodeimagenes
             Marshal.Copy(pointer, buffer, 0, buffer.Length);
             for (int i = 0; i < Imagen.Height * 3 * Imagen.Width; i += 3)
             {
-                b = buffer[i];
+                r = buffer[i];
                 g = buffer[i + 1];
-                r = buffer[i + 2];
+                b = buffer[i + 2];
+
+
+
                 buffer[i] = (r > 127) ? (byte)(255 - r) : r;
                 buffer[i + 1] = (g > 127) ? (byte)(255 - g) : g;
                 buffer[i + 2] = (b > 127) ? (byte)(255 - b) : b;
@@ -296,9 +310,12 @@ namespace TESTprocesamientodeimagenes
                 bS = (int)((buffer[i]) * .131 + (buffer[i + 1]) * .534 + (buffer[i + 2]) * .272);
                 gS = (int)((buffer[i]) * .168 + (buffer[i + 1]) * .686 + (buffer[i + 2]) * .349);
                 rS = (int)((buffer[i]) * .189 + (buffer[i + 1]) * .769 + (buffer[i + 2]) * .393);
-                bS = (bS > 255) ? 255 : bS;
-                gS = (gS > 255) ? 255 : gS;
+
                 rS = (rS > 255) ? 255 : rS;
+                gS = (gS > 255) ? 255 : gS;
+                bS = (bS > 255) ? 255 : bS;
+
+
                 buffer[i] = (byte)bS;
                 buffer[i + 1] = (byte)gS;
                 buffer[i + 2] = (byte)rS;
@@ -309,7 +326,7 @@ namespace TESTprocesamientodeimagenes
         }
 
 
-        private void Sobel(Bitmap Imagen)
+        /*private void Sobel(Bitmap Imagen)
         {
 
             Imagen2 = new Bitmap(Imagen.Width, Imagen.Height);
@@ -379,8 +396,11 @@ namespace TESTprocesamientodeimagenes
             Marshal.Copy(buffer2, 0, pointer2, buffer.Length);
             Imagen.UnlockBits(ImageData);
             Imagen2.UnlockBits(ImageData2);
-            pictureBox1.Image = Imagen;
-        }
+            //pictureBox1.Image = Imagen;
+
+            
+            //filtro = 0;
+        }*/
 
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
         {
@@ -409,7 +429,9 @@ namespace TESTprocesamientodeimagenes
 
         private void Filtro5Button_Click(object sender, EventArgs e)
         {
-            filtro = 5;
+            Form2 photo = new Form2(ActualFrame,1);
+            photo.Show();
+            //filtro = 5;
         }
 
         private void materialButton2_Click(object sender, EventArgs e)
@@ -430,7 +452,9 @@ namespace TESTprocesamientodeimagenes
 
         private void Filtro2Button_Click(object sender, EventArgs e)
         {
-            filtro = 2;
+            Form2 photo = new Form2(ActualFrame, 2);
+            photo.Show();
+            //filtro = 2;
         }
 
         private void pictureBox10_Click(object sender, EventArgs e)

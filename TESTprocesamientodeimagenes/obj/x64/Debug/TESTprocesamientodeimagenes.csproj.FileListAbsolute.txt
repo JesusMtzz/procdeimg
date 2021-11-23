@@ -96,3 +96,4 @@ D:\code\github\procdeimg\TESTprocesamientodeimagenes\obj\x64\Debug\TESTprocesami
 D:\code\github\procdeimg\TESTprocesamientodeimagenes\obj\x64\Debug\TESTprocesamientodeimagenes.exe
 D:\code\github\procdeimg\TESTprocesamientodeimagenes\obj\x64\Debug\TESTprocesamientodeimagenes.pdb
 D:\code\github\procdeimg\TESTprocesamientodeimagenes\obj\x64\Debug\TESTprocesamientodeimagenes.csproj.AssemblyReference.cache
+D:\code\github\procdeimg\TESTprocesamientodeimagenes\obj\x64\Debug\TESTprocesamientodeimagenes.Form2.resources
